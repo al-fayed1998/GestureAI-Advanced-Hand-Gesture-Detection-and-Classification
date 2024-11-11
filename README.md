@@ -124,4 +124,4 @@ Licence
 
 Ce projet est sous licence MIT.
 
-Tu peux adapter et personnaliser les détails pour mieux répondre aux besoins de ton projet.
+
