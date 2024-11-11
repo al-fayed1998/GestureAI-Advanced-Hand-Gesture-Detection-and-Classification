@@ -1,117 +1,127 @@
-# Hand Gesture Detection and Classification Using Deep Learning
+## GestureAI: Advanced Hand Gesture Detection and Classification
 
-This project implements a real-time hand gesture detection and classification system using computer vision and deep learning. It uses OpenCV for video capture and hand tracking, and a VGG16-based deep learning model for gesture classification. The system can classify gestures such as "Headache," "Help," "Dizziness," and more, with data augmentation applied to improve model performance.
+This project implements a real-time hand gesture detection and classification system using computer vision and deep learning. OpenCV is used for video capture and hand tracking, while a VGG16-based deep learning model classifies gestures. The system recognizes gestures such as “Headache,” “Help,” and “Dizziness,” with data augmentation techniques applied to enhance model performance.
 
-## Features
-- Real-time hand detection using a webcam.
-- Hand gesture classification using a fine-tuned VGG16 model.
-- Data augmentation to enhance the dataset (rotation, zoom, flipping).
-- Model training with early stopping to prevent overfitting.
-- Optimized using the Adam optimizer for improved accuracy.
+### Key Features
 
-## Installation
+	•	Real-time hand tracking via webcam.
+	•	Gesture classification using a fine-tuned VGG16 model.
+	•	Comprehensive data augmentation (rotation, zoom, flipping) to boost dataset variability.
+	•	Model training with early stopping to mitigate overfitting.
+	•	Enhanced optimization using the Adam optimizer for better accuracy.
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/hand-gesture-detection.git
-   cd hand-gesture-detection
-   ```
-2. Install the required dependencies:
-   ```
-   pip install -r requirements.txt
+### Installation
 
-3. Make sure you have a GPU-enabled setup (optional but recommended for faster training).
+	1.	Clone the repository:
+
+git clone https://github.com/al-fayed1998/GestureAI-Advanced-Hand-Gesture-Detection-and-Classification.git
+cd GestureAI-Advanced-Hand-Gesture-Detection-and-Classification
 
 
-## Dataset
-The dataset consists of hand gestures divided into categories like "Headache," "Help," and others. You can use your own dataset or generate one by capturing images from a webcam using the data collection script.
+	2.	Install required dependencies:
 
-Data augmentation is applied to increase the diversity of training samples.
+pip install -r requirements.txt
 
-## Usage
-Train the model: You can train the model using your dataset by running the training script.
 
-```bash
+	3.	(Optional) Ensure a GPU-enabled setup for faster training.
+
+### Dataset
+
+The dataset comprises hand gestures divided into categories like “Headache,” “Help,” etc. You can either use an existing dataset or generate one by capturing images through the provided data collection script.
+
+Data augmentation is employed to increase training sample diversity.
+
+Usage
+
+Train the model: Run the training script with your dataset.
+
 python train.py
-```
-Run real-time gesture detection: Once the model is trained, you can run the real-time detection script using your webcam.
 
-```bash
+Run real-time gesture detection: After training, use the detection script for live gesture recognition.
+
 python detect_gesture.py
-```
 
-## Model Details
-- Base model: VGG16 (pre-trained on ImageNet, with the top layer removed).
-- Custom layers: A GlobalAveragePooling2D layer, followed by a Dense layer with 512 units and ReLU activation, and a final Dense layer for classification with softmax activation.
-- Optimizer: Adam optimizer with a learning rate of 0.0001.
-- Loss function: Categorical crossentropy for multi-class classification.
-- Early Stopping: Applied to prevent overfitting by monitoring the validation loss.
+### Model Architecture
 
-## Results
-The model achieves high accuracy in recognizing various hand gestures. The augmentation techniques and early stopping help generalize the model to new data while preventing overfitting.
+	•	Base model: VGG16 (pre-trained on ImageNet, top layers removed).
+	•	Custom layers: Includes a GlobalAveragePooling2D layer, a Dense layer with 512 units and ReLU activation, and a final Dense layer with softmax activation for classification.
+	•	Optimizer: Adam optimizer with a 0.0001 learning rate.
+	•	Loss function: Categorical crossentropy for multi-class classification.
+	•	Early Stopping: Monitors validation loss to prevent overfitting.
 
-## Contribution
-Feel free to fork this repository, submit pull requests, or open issues if you encounter bugs or have suggestions for improvement.
+Results
 
-## License
+The model demonstrates high accuracy in detecting various hand gestures. Data augmentation and early stopping enhance generalization and reduce overfitting.
+
+Contributions
+
+Contributions are welcome! Feel free to fork the repository, submit pull requests, or raise issues with suggestions or bug reports.
+
+License
+
 This project is licensed under the MIT License.
 
-_________________________________________________________________________________________________________________________________________________________________________________________________________________
+Détection et Classification Avancée des Gestes de la Main
 
-# Détection et classification des gestes de la main à l'aide de l'apprentissage profond
+Ce projet propose un système de détection et de classification des gestes de la main en temps réel basé sur la vision par ordinateur et l’apprentissage profond. OpenCV est utilisé pour la capture vidéo et le suivi des mains, tandis qu’un modèle basé sur VGG16 effectue la classification. Le système reconnaît des gestes tels que « Mal de tête », « Aide », « Étourdissement », et plus encore, avec des techniques d’augmentation des données appliquées pour améliorer la performance du modèle.
 
-Ce projet met en œuvre un système de détection et de classification des gestes de la main en temps réel à l'aide de la vision par ordinateur et de l'apprentissage profond. Il utilise OpenCV pour la capture vidéo et le suivi des mains, et un modèle d'apprentissage profond basé sur VGG16 pour la classification des gestes. Le système peut classer des gestes tels que « mal de tête », « aide », « étourdissement », etc. L'augmentation des données est appliquée pour améliorer les performances du modèle.
+Caractéristiques Principales
 
-## Caractéristiques
-- Détection des mains en temps réel à l'aide d'une webcam.
-- Classification des gestes de la main à l'aide d'un modèle VGG16 affiné.
-- Augmentation des données pour améliorer l'ensemble des données (rotation, zoom, retournement).
-- Apprentissage du modèle avec arrêt précoce pour éviter le surajustement.
-- Optimisation à l'aide de l'optimiseur Adam pour une meilleure précision.
+	•	Suivi des mains en temps réel via webcam.
+	•	Classification des gestes avec un modèle VGG16 affiné.
+	•	Augmentation des données (rotation, zoom, retournement) pour améliorer la diversité de l’ensemble d’entraînement.
+	•	Entraînement avec arrêt précoce pour éviter le surajustement.
+	•	Optimisation avec l’algorithme Adam pour une précision accrue.
 
-## Installation
+Installation
 
-1. Cloner le dépôt :
-   ```bash
-   git clone https://github.com/yourusername/hand-gesture-detection.git
-   cd hand-gesture-detection
-   ```
-2. Installez les dépendances nécessaires :
-   ```
-   pip install -r requirements.txt
+	1.	Cloner le dépôt :
 
-3. Assurez-vous d'avoir une configuration compatible avec le GPU (optionnel mais recommandé pour un entraînement plus rapide).
+git clone https://github.com/yourusername/hand-gesture-detection.git
+cd hand-gesture-detection
 
 
-## Ensemble de données
-L'ensemble de données se compose de gestes de la main divisés en catégories telles que « Mal de tête », « Aide » et autres. Vous pouvez utiliser votre propre ensemble de données ou en générer un en capturant des images à partir d'une webcam à l'aide du script de collecte de données.
+	2.	Installer les dépendances requises :
 
-L'augmentation des données est appliquée pour accroître la diversité des échantillons d'entraînement.
+pip install -r requirements.txt
 
-## Utilisation
-Entraîner le modèle : Vous pouvez entraîner le modèle en utilisant votre jeu de données en exécutant le script d'entraînement.
 
-```bash
+	3.	(Optionnel) Assurez-vous d’avoir un environnement compatible GPU pour un entraînement plus rapide.
+
+Ensemble de Données
+
+L’ensemble de données est composé de gestes de la main divisés en catégories telles que « Mal de tête », « Aide », etc. Vous pouvez utiliser un ensemble de données existant ou en générer un avec le script de collecte de données fourni.
+
+L’augmentation des données est utilisée pour accroître la diversité des échantillons d’entraînement.
+
+Utilisation
+
+Entraînement du modèle : Lancez le script d’entraînement avec votre jeu de données.
+
 python train.py
-```
-Exécuter la détection des gestes en temps réel : Une fois le modèle entraîné, vous pouvez exécuter le script de détection en temps réel en utilisant votre webcam.
 
-``bash
+Détection en temps réel des gestes : Après l’entraînement, utilisez le script de détection pour la reconnaissance des gestes en direct.
+
 python detect_gesture.py
-``
 
-## Détails du modèle
-- Modèle de base : VGG16 (pré-entraîné sur ImageNet, avec la couche supérieure enlevée).
-- Couches personnalisées : Une couche GlobalAveragePooling2D, suivie d'une couche Dense avec 512 unités et activation ReLU, et une couche Dense finale pour la classification avec activation softmax.
-- Optimiseur : Optimiseur Adam avec un taux d'apprentissage de 0,0001.
-- Fonction de perte : Crossentropie catégorielle pour la classification multi-classes.
-- Arrêt précoce : Appliqué pour éviter le surajustement en surveillant la perte de validation.
+Détails du Modèle
 
-## Résultats
-Le modèle atteint une grande précision dans la reconnaissance des différents gestes de la main. Les techniques d'augmentation et l'arrêt précoce permettent de généraliser le modèle à de nouvelles données tout en évitant l'ajustement excessif.
+	•	Modèle de base : VGG16 (pré-entraîné sur ImageNet, couche supérieure enlevée).
+	•	Couches personnalisées : Comprend une couche GlobalAveragePooling2D, une couche Dense avec 512 unités et activation ReLU, et une couche finale Dense avec activation softmax pour la classification.
+	•	Optimiseur : Adam avec un taux d’apprentissage de 0,0001.
+	•	Fonction de perte : Crossentropie catégorielle pour la classification multi-classes.
+	•	Arrêt précoce : Surveille la perte de validation pour éviter le surajustement.
 
-## Contribution
-N'hésitez pas à forker ce dépôt, à soumettre des requêtes ou à ouvrir des problèmes si vous rencontrez des bogues ou si vous avez des suggestions d'amélioration.
+Résultats
 
-## Licence
-Ce projet est placé sous licence MIT.
+Le modèle obtient une grande précision dans la reconnaissance des gestes de la main. L’augmentation des données et l’arrêt précoce contribuent à la généralisation et à la réduction du surajustement.
+
+Contributions
+
+Les contributions sont les bienvenues ! N’hésitez pas à forker le dépôt, soumettre des pull requests ou ouvrir des issues pour signaler des problèmes ou proposer des améliorations.
+
+Licence
+
+Ce projet est sous licence MIT.
+
+Tu peux adapter et personnaliser les détails pour mieux répondre aux besoins de ton projet.
