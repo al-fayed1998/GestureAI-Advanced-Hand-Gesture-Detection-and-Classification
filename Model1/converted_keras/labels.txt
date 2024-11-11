@@ -1,0 +1,6 @@
+0 boire de l'eau
+1 Maux de tete
+2 Moi
+3 Au secours
+4 Vertige
+5 Vomissement
