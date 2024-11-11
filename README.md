@@ -77,8 +77,8 @@ Installation
 
 	1.	Cloner le dépôt :
 
-git clone https://github.com/yourusername/hand-gesture-detection.git
-cd hand-gesture-detection
+git clone https://github.com/al-fayed1998/GestureAI-Advanced-Hand-Gesture-Detection-and-Classification.git
+cd GestureAI-Advanced-Hand-Gesture-Detection-and-Classification
 
 
 	2.	Installer les dépendances requises :
